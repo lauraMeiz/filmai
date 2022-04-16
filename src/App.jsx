@@ -1,14 +1,15 @@
 import "./crud.scss";
 
-import Create from "./Components/Create";
-import Read from "./Components/Read";
+// import Read from "./Components/Read";
+import Search from "./Components/Search";
 // import filmas from "./Components/img/movie.svg";
 
 function App() {
   return (
     <div className="app">
-      <Create />
-      <Read></Read>
+      {/* <Read></Read> */}
+
+      <Search></Search>
     </div>
   );
 }

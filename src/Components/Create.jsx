@@ -1,20 +1,27 @@
-import { useState } from "react";
-import filmas from "../Components/img/movie.svg";
+// import { useState } from "react";
+// import filmas from "../Components/img/movie.svg";
+// import Filmas from "./Filmas";
 
-function Create() {
-  const [value, setValue] = useState("");
+// function Create({ filmai }) {
+//   const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
-  return (
-    <>
-      <div className="top">
-        {" "}
-        <input type="search" value={value} onChange={handleChange} />
-        <img style={{ width: "30px" }} src={filmas} alt="filmas" />
-      </div>
-    </>
-  );
-}
-export default Create;
+//   const handleChange = (e) => {
+//     setValue(e.target.value);
+//   };
+//   return (
+//     <>
+//       {/* <Filmas filmas={filmai}></Filmas> */}
+//       {/* <div className="top">
+//         {" "}
+//         <input
+//           type="search"
+//           filmai={filmai}
+//           value={value}
+//           onChange={handleChange}
+//         />
+//         <img style={{ width: "30px" }} src={filmas} alt="filmas" />
+//       </div> */}
+//     </>
+//   );
+// }
+// export default Create;

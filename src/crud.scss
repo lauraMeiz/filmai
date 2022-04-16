@@ -12,6 +12,7 @@ body {
 .app {
   width: 100vw;
   height: 100vh;
+
   .top {
     width: 800px;
     display: flex;
@@ -20,6 +21,7 @@ body {
     padding: 30px 90px 30px 90px;
     margin: 40px calc(50% - 400px);
   }
+
   input {
     font-size: 30px;
     background-color: #b81d24;
@@ -28,6 +30,20 @@ body {
     color: white;
     margin-left: 10px;
   }
+  // input[option] {
+  //   width: 100px;
+  // }
+  // datalist option::before {
+  //   width: 500px;
+  // }
+  // #editing-view-port {
+  //   width: 600px;
+  // }
+
+  // datalist option::before {
+  //   visibility: hidden;
+  // }
+
   img {
     color: white;
     margin-top: -35px;
