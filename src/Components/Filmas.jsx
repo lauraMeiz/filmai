@@ -5,7 +5,6 @@ function Filmas({ filmas }) {
     <>
       {filmas.map((f) => (
         <div key={f.id} className="film">
-          {/* <div>{console.log(filmas.production_companies.length)}</div> */}
           <img
             className="film-img"
             alt={f.title}
