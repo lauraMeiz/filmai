@@ -4,31 +4,33 @@ function Filmas({ filmas }) {
   return (
     <>
       {filmas.map((f) => (
-        <div key={f.id} className="film">
-          <img
-            className="film-img"
-            alt={f.title}
-            src={`https://image.tmdb.org/t/p/w500/${f.poster_path}`}
-          />
-          <div className="description">
-            <h3>
-              ({f.release_date}){"  "}
-              {f.original_title}
-            </h3>
+        <li>
+          <div key={f.id} className="film">
+            <img
+              className="film-img"
+              alt={f.title}
+              src={`https://image.tmdb.org/t/p/w500/${f.poster_path}`}
+            />
+            <div className="description">
+              <h3>
+                ({f.release_date}){"  "}
+                {f.original_title}
+              </h3>
 
-            <div className="vote-star">
-              <img className="star" src={star} alt={f.vote_average} />
-              <div>
+              <div className="vote-star">
+                <img className="star" src={star} alt={f.vote_average} />
                 <div>
-                  {f.vote_average}
-                  <span>/10</span>
+                  <div>
+                    {f.vote_average}
+                    <span>/10</span>
+                  </div>
+                  <div className="vote">{f.vote_count} vote</div>
                 </div>
-                <div className="vote">{f.vote_count} vote</div>
               </div>
+              <div>{f.overview}</div>
             </div>
-            <div>{f.overview}</div>
           </div>
-        </div>
+        </li>
       ))}
     </>
   );
