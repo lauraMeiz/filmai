@@ -20,6 +20,14 @@ body {
     background-color: #e41d27;
     padding: 30px 90px 30px 90px;
     margin: 40px calc(50% - 400px);
+
+    img {
+      color: white;
+      margin-bottom: -35px;
+      margin-left: 10px;
+      filter: brightness(0) saturate(100%) invert(99%) sepia(79%) saturate(2%)
+        hue-rotate(283deg) brightness(110%) contrast(100%);
+    }
   }
 
   input {
@@ -29,6 +37,7 @@ body {
   input[type="search"] {
     color: white;
     margin-left: 10px;
+    padding-left: 30px;
   }
   // input[option] {
   //   width: 100px;
@@ -44,11 +53,6 @@ body {
   //   visibility: hidden;
   // }
 
-  img {
-    color: white;
-    margin-top: -35px;
-    margin-left: 10px;
-  }
   .film {
     display: flex;
     flex-direction: row;

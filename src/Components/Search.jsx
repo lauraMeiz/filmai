@@ -2,52 +2,54 @@ import { useEffect, useState } from "react";
 // import Filmas from "./Filmas";
 import filmas from "../Components/img/movie.svg";
 import Filmas from "./Filmas";
+import FilmsList from "./FilmsList";
 
-function Search({ handleChange }) {
+function Search() {
   const [filmai, setFilmai] = useState([]);
+  const [search, setSearch] = useState("");
 
+  const handleChange = (e) => {
+    setSearch(e.target.value);
+  };
   useEffect(() => {
-    fetch(
-      "https://api.themoviedb.org/3/search/movie?api_key=90a7b285b1f5effd9343b4ca3f7ad54f&language=en-US&query=search"
-    )
-      .then((res) => res.json())
+    if (search.length > 2) {
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=90a7b285b1f5effd9343b4ca3f7ad54f&language=en-US&query=${search}`
+      )
+        .then((res) => res.json())
 
-      .then((result) => {
-        console.log(result.results);
+        .then((result) => {
+          console.log(result);
 
-        setFilmai(result.results);
-      })
-      .catch((error) => console.log(error));
-  }, []);
+          setFilmai(result.results);
+        })
+        .catch((error) => console.log(error));
+    }
+  }, [search]);
+
   return (
     <>
       <div>
         <div className="top">
+          <img style={{ width: "30px" }} src={filmas} alt="filmas" />
           <input
-            style={{ color: "white" }}
+            style={{ color: "white", paddingLeft: "50px" }}
             type="text"
             list="filmai"
             autoFocus
             onChange={handleChange}
           />
-          <img style={{ width: "30px" }} src={filmas} alt="filmas" />
-          <datalist id="filmai">
-            {filmai.map((f) => (
+        </div>
+        <datalist id="filmai">
+          {filmai.length > 0 &&
+            filmai.map((f) => (
               <>
                 {" "}
-                <option key={f.id} value={f.original_title}>
-                  <img
-                    className="film-img"
-                    alt={f.title}
-                    src={`https://image.tmdb.org/t/p/w500/${f.poster_path}`}
-                  />
-                  {/* {f.original_title} */}
-                  {f.vote_average} Raiting, {f.release_date}
-                </option>
+                <FilmsList films={f}></FilmsList>
               </>
             ))}
-          </datalist>
-        </div>
+        </datalist>
+        {/* </div> */}
 
         <Filmas filmas={filmai}></Filmas>
       </div>
