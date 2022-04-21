@@ -7,9 +7,15 @@ import FilmsList from "./FilmsList";
 function Search() {
   const [filmai, setFilmai] = useState([]);
   const [search, setSearch] = useState("");
+  const [choice, setChoice] = useState("");
 
   const handleChange = (e) => {
     setSearch(e.target.value);
+  };
+  console.log(filmai.id);
+
+  const show = (filmas) => {
+    setChoice(filmas);
   };
   useEffect(() => {
     if (search.length > 2) {
@@ -38,20 +44,26 @@ function Search() {
             list="filmai"
             autoFocus
             onChange={handleChange}
+            value={choice.original_title}
           />
         </div>
-        <datalist id="filmai">
-          {filmai.length > 0 &&
-            filmai.map((f) => (
-              <>
-                {" "}
-                <FilmsList films={f}></FilmsList>
-              </>
-            ))}
-        </datalist>
-        {/* </div> */}
+        <div className="list">
+          <li id="filmai">
+            {filmai.length > 0 &&
+              filmai
+                .slice(0, 8)
+                .map((f) => (
+                  <FilmsList
+                    key={f.id}
+                    show={show}
+                    onClick={() => show(filmas)}
+                    films={f}
+                  ></FilmsList>
+                ))}
+          </li>
+        </div>
 
-        <Filmas filmas={filmai}></Filmas>
+        {choice && <Filmas f={choice}></Filmas>}
       </div>
     </>
   );

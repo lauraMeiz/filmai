@@ -39,6 +39,38 @@ body {
     margin-left: 10px;
     padding-left: 30px;
   }
+  .option {
+    padding: 10px;
+    background-color: #a4a4a4;
+
+    color: black;
+    padding-left: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  option:hover {
+    background-color: #e41d27;
+
+    color: white;
+  }
+
+  // .op {
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+
+  .list {
+    width: 600px;
+    margin: 0 calc(50% - 300px);
+    margin-top: -70px;
+  }
+  #filmai {
+    list-style: none;
+  }
   // input[option] {
   //   width: 100px;
   // }
