@@ -1,7 +1,7 @@
 function FilmsList({ films, show }) {
   return (
     <>
-      <option
+      <li
         onClick={() => show(films)}
         className="option"
         key={films.id}
@@ -11,7 +11,7 @@ function FilmsList({ films, show }) {
         <div className="raiting">
           {films.vote_average} Raiting, {films.release_date.slice(0, 4)}
         </div>
-      </option>
+      </li>
     </>
   );
 }

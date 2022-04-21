@@ -44,23 +44,24 @@ function Search() {
             list="filmai"
             autoFocus
             onChange={handleChange}
-            value={choice.original_title}
+            value={search ? choice.original_title : ""}
           />
         </div>
         <div className="list">
-          <li id="filmai">
-            {filmai.length > 0 &&
-              filmai
-                .slice(0, 8)
-                .map((f) => (
+          <ul id="filmai">
+            {filmai.length !== 0
+              ? filmai.slice(0, 8).map((f) => (
                   <FilmsList
                     key={f.id}
                     show={show}
                     onClick={() => show(filmas)}
                     films={f}
-                  ></FilmsList>
-                ))}
-          </li>
+                  >
+                    {choice.original_title}
+                  </FilmsList>
+                ))
+              : ""}
+          </ul>
         </div>
 
         {choice && <Filmas f={choice}></Filmas>}
