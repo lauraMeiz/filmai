@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/filmai/static/css/main.ec5c2fa1.css",
+    "main.css": "/filmai/static/css/main.aa60628b.css",
     "main.js": "/filmai/static/js/main.c7134509.js",
     "static/js/787.81cdfaf0.chunk.js": "/filmai/static/js/787.81cdfaf0.chunk.js",
     "static/media/star.svg": "/filmai/static/media/star.de82f684d9b78d1adba7723eaae71dab.svg",
     "index.html": "/filmai/index.html",
     "static/media/movie.svg": "/filmai/static/media/movie.f7adbb31d68e79caa835849fa73c5650.svg",
-    "main.ec5c2fa1.css.map": "/filmai/static/css/main.ec5c2fa1.css.map",
+    "main.aa60628b.css.map": "/filmai/static/css/main.aa60628b.css.map",
     "main.c7134509.js.map": "/filmai/static/js/main.c7134509.js.map",
     "787.81cdfaf0.chunk.js.map": "/filmai/static/js/787.81cdfaf0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ec5c2fa1.css",
+    "static/css/main.aa60628b.css",
     "static/js/main.c7134509.js"
   ]
 }
