@@ -20,6 +20,10 @@ body {
     background-color: #e41d27;
     padding: 30px 90px 30px 90px;
     margin: 40px calc(50% - 400px);
+    @media (max-width: 500px) {
+      width: 400px;
+      margin: 40px calc(50% - 200px);
+    }
 
     img {
       color: white;
@@ -67,6 +71,10 @@ body {
     width: 600px;
     margin: 0 calc(50% - 300px);
     margin-top: -70px;
+    @media (max-width: 500px) {
+      width: 200px;
+      margin: -40px calc(50% - 100px);
+    }
   }
   #filmai {
     list-style: none;
@@ -87,7 +95,7 @@ body {
 
   .film {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
@@ -98,6 +106,13 @@ body {
     justify-content: flex-start;
     width: 300px;
     margin-right: 50px;
+    @media (max-width: 500px) {
+      width: 300px;
+      margin: 0 calc(50% - 150px);
+      margin-right: 0;
+      align-items: center;
+      justify-content: flex-start;
+    }
   }
   .description {
     margin-top: 0;
@@ -105,6 +120,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    @media (max-width: 500px) {
+      width: 200px;
+      margin: 40px calc(50% - 100px);
+      justify-content: flex-start;
+    }
   }
   .star {
     width: 30px;
