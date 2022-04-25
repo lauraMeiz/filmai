@@ -7,9 +7,11 @@ function FilmsList({ films, show }) {
         key={films.id}
         value={films.original_title}
       >
-        <div> {films.original_title}</div>
         <div className="raiting">
-          {films.vote_average} Raiting, {films.release_date.slice(0, 4)}
+          <div style={{ color: "black" }}> {films.original_title}</div>
+          <div style={{ opacity: "0.8" }}>
+            {films.vote_average} Raiting, {films.release_date.slice(0, 4)}
+          </div>
         </div>
       </li>
     </>

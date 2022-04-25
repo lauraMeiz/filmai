@@ -12,7 +12,7 @@ function Filmas({ f }) {
           />
           <div className="description">
             <h3>
-              ({f.release_date}){"  "}
+              ({f.release_date.slice(0, 4)}){"  "}
               {f.original_title}
             </h3>
 

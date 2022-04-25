@@ -16,6 +16,7 @@ function Search() {
 
   const show = (filmas) => {
     setChoice(filmas);
+    setFilmai("");
   };
   useEffect(() => {
     if (search.length > 2) {
@@ -43,8 +44,11 @@ function Search() {
             type="text"
             list="filmai"
             autoFocus
+            placeholder="Search..."
             onChange={handleChange}
-            value={search ? choice.original_title : ""}
+            value={search}
+
+            //value={search ? choice.original_title : ""}
           />
         </div>
         <div className="list">
