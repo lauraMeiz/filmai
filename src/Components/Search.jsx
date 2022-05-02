@@ -17,7 +17,7 @@ function Search() {
   const show = (filmas) => {
     setChoice(filmas);
     setFilmai("");
-    setSearch(filmas.title);
+    setSearch(filmas.original_title);
   };
   useEffect(() => {
     if (search.length > 2) {
